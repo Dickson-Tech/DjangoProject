@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>{% block title %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+   
+</head>
+<body class="m-1">
+    
+           
+    <form actions="/register" method="POST" >
+    
+        {%  csrf_token %}
+
+        <h3 class="text-light bg-success text-center">User Personal Information </h3>
+    {% load static %}
+<section class="bg-light py-3 py-md-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+        <div class="card border border-light-subtle rounded-3 shadow-sm">
+          <div class="card-body p-3 p-md-4 p-xl-5">
+            <div class="text-center mb-3">
+              <a href="#!">
+                <img class="logo" src="{% static 'images/rta.jpg' %}" alt="" width="100" height="57">
+              </a>
+            </div>
+            <h2 class="fs-6 fw-normal text-center text-secondary mb-4">SignUp to Create your account</h2>
+            <form action="#!">
+              <div class="row gy-2 overflow-hidden">
+   
+        <form> 
+            
+            <label for="username" class="form-label">Username:</label>
+        <input class="form-control" type="text" id="username" name="username" placeholder="create your username" required>
+        <br>
+                           
+        <label for="fname" class="form-label">First Name:</label>
+        <input class="form-control" type="text" id="fname" name="fname" placeholder="Enter your Firstname" required>
+        <br>
+                 
+        <label for="lname" class="form-label">Last Name:</label>
+        <input class="form-control" type="text" id="lname" name="lname" placeholder="Enter your Lastname" required>
+        <br>
+               
+        <label for="email" class="form-label">Email Address:</label>
+        <input class="form-control" type="email" id="email" name="email" placeholder="Enter your Email address" required>
+               <br>
+        
+        <label for="number" class="form-label">Phone Number:</label>
+        <input class="form-control" type="text" id="number" name="number" placeholder="Enter your Phone number" required>
+        <br>
+                    
+        <label for="gender" class="form-label">Gender:</label>
+        <input class="form-control" type="text" id="gender" name="gender" placeholder="Enter your Gender" required>
+            <br>
+                  
+              <label for="dob" class="form-label">Date of Birth:</label>
+        <input class="form-control" type="date" id="dob" name="dob" placeholder="Enter your date of birth" required>
+         <br>
+                           
+     
+        <label for="password1" class="form-label">Password:</label>
+        <input class="form-control" type="text" id="password1" name="password1" placeholder="Enter your password" required>
+         <br>
+        
+        <label for="password2" class="form-label">Confirm Password:</label>
+        <input class="form-control" type="text" id="password2" name="password2" placeholder="confirm your password" required>
+        <br>
+                 
+    <button class="btn btn-success " type="submit">Register</button>
+           
+        </div>
+    {% block content %}
+    {% endblock %}
+    </form>
+</body>
+</html>

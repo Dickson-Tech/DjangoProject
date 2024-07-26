@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+</head>
+ <body>
+   
+  <h3 class="text-light bg-success">Apply for your License</h3>
+  <h5>Please select the type of License you are Applying</h5>
+    <form actions="/application" method="POST">
+        {%  csrf_token %}
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>New Learners
+            <label class="form-check-label" for="radio1"></label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Renewal
+            <label class="form-check-label" for="radio2"></label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Upgrade
+            <label class="form-check-label"></label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Expetriate
+            <label class="form-check-label"></label>
+          </div>
+    
+    
+   
+  {% block content %}
+  {% endblock %} 
+</body>
+</html>

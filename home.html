@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+<!-- CSS Custom File -->
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-success mt-0">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img class="logo" src="{% static 'images/rta.jpg' %}" alt="" style="width:50px;" class="rounded-pill"></a>
+        <div class="collapse navbar-collapse" 
+        id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+               <a class="nav-link active" a
+                  ria-current="page" 
+                  href="#">HOME</a>
+           
+           <!-- New tabs -->
+           <li class="nav-item">
+               <a class="nav-link" href="https://www.digital.gov.pg/index.php/digital-services/e-government-portal/">VISIT OUR GOVPORTAL</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" href="#">HELP AND SUPPORT</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="register">SIGNUP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login">LOGIN</a>
+              
+   </div>
+</div>
+</nav> 
+   
+
+</nav>
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>
